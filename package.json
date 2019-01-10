@@ -1,0 +1,24 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "build": "babel server.js db.js models/**/*.js controller/**/*.js -d dist",
+    "start": "yarn build && PORT=.3001 nodemon dist/server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn start\" \"yarn client\"",
+    "client:prod":"cd client && yarn build && yarn serve",
+    "prod": "concurrently --kill-others-on-fail \"yarn start\" \"yarn client:prod\""
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^2.2.33"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "concurrently": "^4.1.0"
+  }
+}

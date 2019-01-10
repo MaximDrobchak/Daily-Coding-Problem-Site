@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+#root {
+  max-width: 1200px;
+  min-width: 992px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.home-page {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  padding: auto;
+}

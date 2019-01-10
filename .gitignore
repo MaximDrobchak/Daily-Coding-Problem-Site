@@ -1,0 +1,13 @@
+.vscode
+# dependencies
+/node_modules
+
+# production
+/build
+/dist
+
+# my testing dir
+Testing/
+
+#firebase .env
+firebase.js
