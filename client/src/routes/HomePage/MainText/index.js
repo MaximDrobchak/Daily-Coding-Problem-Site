@@ -8,9 +8,9 @@ export default () => (
     <br />
     <MarginSpan>DEVELOPMENT</MarginSpan>
     <br />
-    <MarginSpan>Tasks programing</MarginSpan>
+    <MarginSpan>Quests programing</MarginSpan>
     <br />
 
-    <Button text='Learn more now' />
+    <Button text="Learn more now" />
   </StyleTextBlock>
 );

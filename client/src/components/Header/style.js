@@ -17,4 +17,7 @@ export const Navigation = styled.div`
   }
 `;
 
-export const AgileNixLinkImage = styled.img`height: 25px;`;
+export const AgileNixLinkImage = styled.img`
+  height: 40px;
+  margin-top: -6%;
+`;
