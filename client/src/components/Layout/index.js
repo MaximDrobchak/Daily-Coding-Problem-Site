@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Header from '../Header';
 import { withRouter } from 'react-router';
 import Helmet from 'react-helmet';
-import logo from '../../assets/Logo/mcdonalds-90s-logo.svg';
+import logo from '../../assets/Logo/logo-code.svg';
 import StyleBackground from './styles';
 const SITE_URL =
-
-    process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :
-    'http://localhost:3000';
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000'
+    : 'http://samikoma.zzz.com.ua:3000';
 
 const defaultTitle = 'Deliy-Coding-Problem';
 const defaultDescription = 'Deliy-Coding-Problem Site.';
@@ -15,7 +15,7 @@ const defaultImage = `${SITE_URL}${logo}`;
 const defaultSep = ' | ';
 
 class Page extends Component {
-  getMetaTags (
+  getMetaTags(
     {
       title,
       description,
@@ -27,17 +27,15 @@ class Page extends Component {
       category,
       tags,
     },
-    pathname,
+    pathname
   ) {
-    const theTitle =
-      title ? (title + defaultSep + defaultTitle).substring(0, 60) :
-      defaultTitle;
-    const theDescription =
-      description ? description.substring(0, 155) :
-      defaultDescription;
-    const theImage =
-      image ? `${SITE_URL}${image}` :
-      defaultImage;
+    const theTitle = title
+      ? (title + defaultSep + defaultTitle).substring(0, 60)
+      : defaultTitle;
+    const theDescription = description
+      ? description.substring(0, 155)
+      : defaultDescription;
+    const theImage = image ? `${SITE_URL}${image}` : defaultImage;
 
     const metaTags = [
       { itemprop: 'name', content: theTitle },
@@ -75,7 +73,7 @@ class Page extends Component {
     return metaTags;
   }
 
-  render () {
+  render() {
     const { children, id, className, backgroundImage, ...rest } = this.props;
 
     return (
@@ -87,9 +85,7 @@ class Page extends Component {
             itemtype: `http://schema.org/${rest.schema || 'WebPage'}`,
           }}
           title={
-
-              rest.title ? rest.title + defaultSep + defaultTitle :
-              defaultTitle
+            rest.title ? rest.title + defaultSep + defaultTitle : defaultTitle
           }
           link={[
             {

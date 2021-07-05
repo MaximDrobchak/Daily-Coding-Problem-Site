@@ -6,6 +6,7 @@ import Header from './../components/Header';
 import Input from './../components/Input';
 import Typed from './../components/Typed';
 import Authorization from './Authorization';
+import Corporation from './Corporation';
 import HomePage from './HomePage';
 
 import ContainerPage from '../components/ContainerPage';
@@ -17,7 +18,8 @@ export { ContainerPage, DevGrid, Button, Layout, Header, Typed, Input };
 
 export default () => (
   <Switch>
-    <Route exact path='/' component={HomePage} />
-    <Route exact path='/authorization' component={Authorization} />
+    <Route exact path="/" component={HomePage} />
+    <Route exact path="/authorization" component={Authorization} />
+    <Route exact path="/corporation" component={Corporation} />
   </Switch>
 );
